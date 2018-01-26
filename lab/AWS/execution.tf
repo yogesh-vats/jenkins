@@ -22,6 +22,14 @@ module "pub_subnet" {
   map_public_ip_on_launch = "true"
 }
 
+module "jenkins_setup_sg" {
+  source            = "github.com/opstree-terraform/security_group_rule"
+  from_port         = "22"
+  to_port           = "22"
+  protocol          = "tcp"
+  security_group_id = "${module.jenkins_vpc.default_sg_id}"
+}
+
 module "server" {
   source = "github.com/opstree-terraform/ec2"
 
