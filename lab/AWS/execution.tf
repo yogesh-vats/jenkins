@@ -8,12 +8,8 @@ module "jenkins_vpc" {
   name   = "${var.vpc_name}"
 }
 
-resource "aws_subnet" "subnet" {
-  vpc_id            = "${module.jenkins_vpc.id}"
-  cidr_block        = "${var.subnet_cidr}"
-  availability_zone = "${var.aws_region}a"
-
-  tags {
-    Name = "${var.vpc_name}-public-sn"
-  }
+module "jenkins_setup_key_pair" {
+  source          = "github.com/opstree-terraform/key_pair.git"
+  public_key_path = "${var.pub_key_path}"
+  name            = "${var.vpc_name}-key"
 }

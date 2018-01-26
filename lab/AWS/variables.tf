@@ -13,3 +13,7 @@ variable "subnet_cidr" {
 variable "vpc_name" {
   default = "jenkins-training"
 }
+
+variable "pub_key_path" {
+  default = "id_rsa.pub"
+}
