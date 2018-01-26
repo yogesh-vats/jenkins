@@ -21,3 +21,16 @@ module "pub_subnet" {
   az                      = "${var.aws_region}a"
   map_public_ip_on_launch = "true"
 }
+
+module "server" {
+  source = "github.com/opstree-terraform/ec2"
+
+  subnet_id          = "${module.pub_subnet.id}"
+  aws_region         = "${var.aws_region}"
+  aws_region_os      = "${var.aws_region_os}"
+  name               = "${var.vpc_name}-sandeep.rawat"
+  type               = "t2.nano"
+  key_pair_id        = "${module.jenkins_setup_key_pair.id}"
+  security_group_ids = ["${module.jenkins_vpc.default_sg_id}"]
+  zone_id            = "${module.jenkins_vpc.zone_id}"
+}

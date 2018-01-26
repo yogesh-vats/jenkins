@@ -17,3 +17,7 @@ variable "vpc_name" {
 variable "pub_key_path" {
   default = "id_rsa.pub"
 }
+
+variable "aws_region_os" {
+  default = "us-east-1-ubuntu"
+}
