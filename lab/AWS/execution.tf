@@ -23,3 +23,13 @@ resource "aws_route" "public_internet_gateway_route" {
   destination_cidr_block = "0.0.0.0/0"
   gateway_id             = "${aws_internet_gateway.igw.id}"
 }
+
+resource "aws_subnet" "subnet" {
+  vpc_id            = "${aws_vpc.jenkins-training-vpc.id}"
+  cidr_block        = "${var.subnet_cidr}"
+  availability_zone = "${var.aws_region}a"
+
+  tags {
+    Name = "${var.vpc_name}-public-sn"
+  }
+}
