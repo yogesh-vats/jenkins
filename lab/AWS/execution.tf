@@ -13,3 +13,11 @@ module "jenkins_setup_key_pair" {
   public_key_path = "${var.pub_key_path}"
   name            = "${var.vpc_name}-key"
 }
+
+module "pub_subnet" {
+  source                  = "github.com/opstree-terraform/subnet"
+  vpc_id                  = "${module.jenkins_vpc.id}"
+  cidr                    = "${var.subnet_cidr}"
+  az                      = "${var.aws_region}a"
+  map_public_ip_on_launch = "true"
+}
