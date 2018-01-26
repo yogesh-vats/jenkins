@@ -30,6 +30,14 @@ module "jenkins_setup_sg" {
   security_group_id = "${module.jenkins_vpc.default_sg_id}"
 }
 
+module "jenkins_setup_sg_http" {
+  source            = "github.com/opstree-terraform/security_group_rule"
+  from_port         = "8080"
+  to_port           = "8080"
+  protocol          = "tcp"
+  security_group_id = "${module.jenkins_vpc.default_sg_id}"
+}
+
 module "server" {
   source = "github.com/opstree-terraform/ec2"
 
