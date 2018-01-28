@@ -7,6 +7,7 @@ Steps to be performed by Trainer to showcase CI
     *
 FindBugs Plug-in
     * Static Analysis Collector Plug-in
+    * Cobertura Plugin
   * Install below softwares under Global tool configuration
     * Maven | Maven 3.5.2
     * Java | You need Oracle account for same | JDK 8u162
@@ -22,3 +23,7 @@ FindBugs Plug-in
   * Choose Job type as MavenProject
   * Provide git repository ```https://github.com/OpsTree/ContinuousIntegration```
   * Use ```clean compile findbugs:findbugs checkstyle:checkstyle``` as target
+* Setup code coverage Job
+  * Choose Job type as MavenProject
+  * Provide git repository ```https://github.com/OpsTree/ContinuousIntegration```
+  * Use ```clean compile cobertura:cobertura``` as target
