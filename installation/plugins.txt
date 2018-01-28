@@ -1,0 +1,4 @@
+git:3.7.0
+git-client:2.7.1
+job-dsl:1.67
+maven-plugin:3.1
