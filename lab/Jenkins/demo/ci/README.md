@@ -4,8 +4,7 @@ Steps to be performed by Trainer to showcase CI
   * Install below plugins
     * Maven integration plugin
     * Checkstyle Plug-in
-    *
-FindBugs Plug-in
+    * FindBugs Plug-in
     * Static Analysis Collector Plug-in
     * Cobertura Plugin
   * Install below softwares under Global tool configuration
