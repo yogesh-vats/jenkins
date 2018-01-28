@@ -1,7 +1,12 @@
 Steps to be performed by Trainer to showcase CI
 
 * Pre requisite
-  * Install Maven integration plugin
+  * Install below plugins
+    * Maven integration plugin
+    * Checkstyle Plug-in
+    *
+FindBugs Plug-in
+    * Static Analysis Collector Plug-in
   * Install below softwares under Global tool configuration
     * Maven | Maven 3.5.2
     * Java | You need Oracle account for same | JDK 8u162
@@ -13,3 +18,7 @@ Steps to be performed by Trainer to showcase CI
   * Choose Job type as MavenProject
   * Provide git repository ```https://github.com/OpsTree/ContinuousIntegration```
   * Use ```clean compile``` as target
+* Setup static code analysis Job
+  * Choose Job type as MavenProject
+  * Provide git repository ```https://github.com/OpsTree/ContinuousIntegration```
+  * Use ```clean compile findbugs:findbugs checkstyle:checkstyle``` as target
