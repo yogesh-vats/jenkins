@@ -1,4 +1,4 @@
-pipeline {
+Pipeline {
     agent any
 
     stages {
@@ -10,8 +10,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'check quality'
-            }
-	    steps {
                 echo 'check code coverage'
             }
         }
