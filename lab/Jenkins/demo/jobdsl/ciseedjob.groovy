@@ -9,7 +9,6 @@ job("HelloDSL") {
 	stringParam('POMRELATIVEPATH', 'Spring3HibernateApp', 'your pom\'s relative path')
 	stringParam('MVNGOALS', 'compile', 'EX: compile pmd:pmd checkstyle:checkstyle -DskipTests cobertura:cobertura -Dcobertura.report.format=xml')
 	stringParam('MAVENAME', 'default', 'This is the name/identifire of your maven.')
-	choiceParam('TEMPLATE', ['codestability', 'codequality', 'codecoverage'], 'your Job template')
     }
    scm {
         git {
