@@ -1,4 +1,4 @@
-job("HelloDSL") {
+job("CIDSL") {
  description("I\'ll say hello to person.")
  logRotator(-1, 10)
   parameters {	
