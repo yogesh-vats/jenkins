@@ -1,4 +1,4 @@
-job("${PROJECT}-DSLCodeCoverage") {
+job("${PROJECT}-${ENV}-DSLCodeCoverage") {
   description('Code Coverage')
   logRotator {
     daysToKeep(60)
