@@ -1,0 +1,12 @@
+node {
+ stage('Code Stability') {
+  sh 'echo "I\'m performing code stabiltiy"'
+ }
+ stage('Code Quality') {
+  sh 'echo "I\'m performing code quality"'
+ }
+ stage('Code Coverage') {
+  sh 'echo "I\'m performing code coverage"'
+ }
+
+}
