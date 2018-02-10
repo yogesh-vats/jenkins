@@ -9,8 +9,7 @@ Assignment1:
 * Create a branch **ninja**
 * Switch into branch **ninja**
 * Update file b.txt with ""This is VCS:Git. This is ninja branch"
-* Commit your changes in ninja branch.
-
+* Commit your changes in ninja branch.  
 
 Assignment2: 
 * Create a account on github.com.
