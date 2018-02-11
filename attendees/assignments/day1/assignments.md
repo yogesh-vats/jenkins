@@ -5,11 +5,22 @@ Assignment1:
 * Create a blank files like a.txt, b.txt.
 * Write "Hi Team Ninja" into a.txt
 * Write "This is VCS:Git" into b.txt
+* Set git config variables.
 * Commit both files.
 * Create a branch **ninja**
 * Switch into branch **ninja**
 * Update file b.txt with ""This is VCS:Git. This is ninja branch"
-* Commit your changes in ninja branch.  
+* Check for the difference made in the file.
+* Commit your changes in ninja branch.
+* Check difference between last two commits.
+* Rename your file b.txt to c.txt
+* Commit your changes.
+* Remove file c.txt.
+* Commit your changes.
+* Create a file text.txt and add it. 
+* Remove it from the staging area.
+ 
+
 
 Assignment2: 
 * Create a account on github.com.
